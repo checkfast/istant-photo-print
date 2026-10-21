@@ -1,4 +1,4 @@
-WITH YOU INSTANT PRINT — versione finale v4
+WITH YOU INSTANT PRINT — versione finale v5
 
 Carica tutti i file di questa cartella nella radice del repository GitHub, sostituendo index.html e comando-stampa.html. Attendi la pubblicazione Pages.
 Per aprire senza confondere le vecchie pagine usa:
@@ -10,3 +10,5 @@ NUOVA FOTO elimina il composito dalla memoria della pagina e riapre la fotocamer
 Impostazioni in alto a destra: password 2006. Il blocco è locale, per evitare cambi accidentali; non è autenticazione server e il codice è visibile nel sito.
 Cornice, logo e impostazioni usano lo stesso archivio locale della versione precedente sullo stesso dominio in Safari normale. Foto e PDF non vengono salvati dall'app. iOS/stampante possono tenere dati temporanei del processo di stampa.
 Non viene registrata una nuova cache offline: durante gli aggiornamenti apri con Internet. Se il vecchio index resta visibile usa with-you.html. Non cancellare i dati del sito se vuoi conservare cornice e logo.
+
+Anteprima v5: usa lo spazio reale disponibile sul display, ricalcolato quando cambiano orientamento, barra Safari e pulsanti. STAMPA e NUOVA FOTO affiancati sotto la foto. Cornice intera senza ingrandimento o ritaglio aggiuntivo. La stampa mantiene lo stesso PDF e la stessa condivisione della v4.
