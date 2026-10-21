@@ -1,0 +1,18 @@
+<!doctype html><html lang="it"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080808"><title>Aggiorna WITH YOU</title><style>body{background:#080808;color:white;font:18px -apple-system,sans-serif;max-width:560px;margin:60px auto;padding:24px;line-height:1.6}button,a{display:inline-block;background:#ff4fa3;color:#080808;padding:18px;border:0;border-radius:12px;font:inherit;font-weight:bold}p{color:#ccc}</style><h1>Aggiorna WITH YOU</h1><p>Chiudi prima le altre schede di questa app. Questa operazione rimuove la cache dell’app. Cornice, logo e impostazioni salvati restano sul dispositivo.</p><button id="update">AGGIORNA L’APP</button><p id="status" role="status"></p><a id="back" href="./" hidden>Torna all’app</a><script>
+'use strict';
+document.getElementById('update').onclick=async()=>{
+ const button=document.getElementById('update'),status=document.getElementById('status');button.disabled=true;
+ try{
+  const scope=new URL('./',location.href).href;
+  if('serviceWorker'in navigator){for(const r of await navigator.serviceWorker.getRegistrations()){if(r.scope===scope)await r.unregister();}}
+  if('caches'in window){for(const key of await caches.keys()){
+   if(!key.startsWith('wyip-shell-'))continue;
+   const cache=await caches.open(key);
+   // Le altre app sullo stesso dominio GitHub Pages non vengono coinvolte.
+   if(await cache.match(new URL('app.js',scope).href))await caches.delete(key);
+  }}
+  status.textContent='Cache rimossa. Tocca “Torna all’app”, poi scatta una foto. Il pulsante deve dire STAMPA FOTO · PDF. Se resta la vecchia versione, chiudi tutte le schede del sito prima di riaprire.';
+  document.getElementById('back').hidden=false;
+ }catch(e){status.textContent='Aggiornamento non riuscito. Verifica Internet e riprova. '+e.message;button.disabled=false;}
+};
+</script></html>
