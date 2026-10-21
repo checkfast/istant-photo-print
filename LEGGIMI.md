@@ -1,27 +1,3 @@
-# Versione v3: stampa da PDF fotografico
-
-Queste istruzioni sostituiscono il percorso di stampa HTML delle versioni v1/v2 descritto più sotto.
-
-STAMPA FOTO · PDF apre una nuova scheda con un PDF generato localmente: una sola pagina esatta 4×6 pollici (101,6 × 152,4 mm), JPEG 1200×1800 fino al bordo, senza testi, indirizzo, data o margini incorporati. Non è il PDF della pagina web: contiene solo la fotografia composta. Non usa server né librerie esterne e non richiede salvataggio in Foto o File.
-
-## Aggiornamento GitHub
-
-Carica TUTTI i file inclusi, anche il NUOVO photo-pdf.js, nella radice del repository e conferma Commit changes. Aspetta la pubblicazione Pages. Apri con Internet, poi chiudi tutte le finestre Safari e Home dell'app e riapri per attivare cache v3. Verifica che il pulsante dica STAMPA FOTO · PDF: se non lo dice, è ancora attiva una versione precedente. Non cancellare i dati del sito: cornice e logo verrebbero rimossi.
-
-## Stampa da iPad
-
-1. Per la prima prova usa Safari direttamente, anziché l'icona Home.
-2. Scatta e premi STAMPA FOTO · PDF.
-3. Nella scheda del PDF usa Condividi → Stampa. Il comportamento di apertura dalla Home può variare con iPadOS: in caso di problemi usa il sito in Safari.
-4. Scegli stampante, carta 10×15 / 4×6, verticale e zoom 100%. Controlla anteprima e una sola pagina. Conferma manualmente.
-5. Chiudi la scheda PDF e torna all'app, poi NUOVA FOTO. RIFAI FOTO / NUOVA FOTO revocano il PDF precedente e ne chiudono la scheda se ancora controllabile dall'app.
-
-Non serve salvare o scaricare il PDF. Il documento e la foto sono tenuti in memoria; il browser e lo spooler di sistema possono conservare dati temporanei fuori dal controllo dell'app. Non chiudere o rifare la foto mentre stai ancora confermando la stampa.
-
-Il PDF elimina margini e intestazioni nel documento sorgente. Non impone però la modalità senza bordi al driver o al dispositivo che pubblica la stampante via AirPrint. Se l'anteprima del PDF non contiene bordi ma la copia fisica sì, va verificata la configurazione AirPrint/stampante. Questa versione richiede una prova fisica e non garantisce la compatibilità dello specifico collegamento RX1HS.
-
----
-
 # WITH YOU INSTANT PRINT
 
 Web app separata per iPad/Safari. Nessuna dipendenza esterna, Apps Script, backend, Drive, QR, mosaico o server MacBook. Giro Frame non è stato modificato.
