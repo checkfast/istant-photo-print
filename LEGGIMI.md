@@ -22,7 +22,7 @@ Web app separata per iPad/Safari. Nessuna dipendenza esterna, Apps Script, backe
 
 APRI FOTOCAMERA → SCATTA FOTO → anteprima del JPEG → RIFAI FOTO oppure STAMPA FOTO → seleziona stampante, carta e copie e conferma manualmente → NUOVA FOTO.
 
-La foto viene centrata e ritagliata in 2:3. La cornice viene adattata all'intero formato; il logo viene applicato sopra la cornice. Il composito è JPEG 1200 × 1800, qualità 95%. Il foglio di stampa contiene solo quel JPEG. Il formato CSS suggerito è 100 × 150 mm (circa 305 ppi); non è un comando obbligatorio per la stampante. Nessun download e nessun salvataggio automatico in Foto.
+La foto viene centrata e ritagliata in 2:3. La cornice viene adattata all'intero formato; il logo viene applicato sopra la cornice. Il composito è JPEG 1200 × 1800, qualità 95%. Il foglio di stampa contiene solo quel JPEG. Il formato CSS suggerito è 4 × 6 pollici (300 ppi); non è un comando obbligatorio per la stampante. Nessun download e nessun salvataggio automatico in Foto.
 
 La foto resta nella memoria della pagina fino a RIFAI FOTO, NUOVA FOTO o chiusura/ricaricamento. L'app non la conserva in IndexedDB, cache o localStorage. Il sistema operativo e la stampante possono mantenere temporaneamente dati di anteprima o coda di stampa: l'app non può controllarli.
 
@@ -34,7 +34,7 @@ La strada tecnica è standard: canvas → composizione JPEG → immagine già de
 
 Non è possibile scegliere in modo silenzioso una stampante, saltare la conferma, conoscere l'esito fisico, assicurare il numero di copie o forzare carta e stampa senza bordi. Dopo aver richiesto la stampa l'app NON dichiara “stampata”: annullamento e successo non sono distinguibili in modo affidabile.
 
-La richiesta @page 100 × 150 mm può essere ignorata o adattata da Safari/driver. Scegli carta fotografica compatibile, verticale, una copia e controlla l'anteprima. Margini, tagli e colori dipendono dalla stampante. Una stampante USB priva di AirPrint nativo non è sufficiente con questa architettura.
+La richiesta @page 4 × 6 pollici può essere ignorata o adattata da Safari/driver. Scegli carta fotografica compatibile, verticale, una copia e controlla l'anteprima. Margini, tagli e colori dipendono dalla stampante. Una stampante USB priva di AirPrint nativo non è sufficiente con questa architettura.
 
 Se la finestra non appare nella versione installata, prova lo stesso sito direttamente in Safari e ripeti STAMPA FOTO. Come ulteriore percorso manuale, Safari → Condividi → Stampa usa lo stesso foglio di stampa. Non scegliere NUOVA FOTO prima di aver concluso la finestra.
 
@@ -60,3 +60,11 @@ Per un aggiornamento, modifica anche il numero CACHE in sw.js (es. v2); pubblica
 - MDN, fotocamera e HTTPS: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
 
 Istruzioni aggiornate al 21 ottobre 2026. File realizzati senza dipendenze da CDN, font remoti o strumenti di analisi.
+
+## Aggiornamento stampa v2 — pagina piena 4×6
+
+Il foglio di stampa ora richiede 4×6 pollici e la foto occupa l'intera pagina logica esposta da Safari. Questo evita il riquadro fisso 10×15 dentro una pagina A4, che può produrre una foto piccola quando AirPrint riduce il documento. Il riempimento usa un ritaglio centrale: se Safari mantiene una pagina di proporzioni diverse da 2:3, una parte della cornice può essere tagliata. Non forza la stampa senza bordi né il formato comunicato dal dispositivo AirPrint.
+
+Per aggiornare GitHub carica tutti i file della nuova cartella sopra quelli esistenti e conferma Commit changes. Attendi la pubblicazione Pages. Con Internet attivo, apri l'app e poi chiudi TUTTE le sue finestre, sia Safari sia quella dalla Home. Riapri; se necessario ripeti apertura e chiusura perché il nuovo service worker si attivi. Non cancellare i dati del sito: perderesti cornice e logo. La cache v2 sostituisce la v1 dopo l'attivazione.
+
+Esegui una sola stampa di prova. Controlla dimensioni, bordi, taglio della cornice e numero di pagine. Questa modifica non è stata verificata fisicamente su RX1H2/iPad. Se resta piccola, occorre controllare la configurazione del dispositivo che espone la stampante ad AirPrint; un ulteriore ingrandimento arbitrario può solo tagliare l'immagine.
