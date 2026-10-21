@@ -1,0 +1,9 @@
+PROVA PDF INCORPORATO — v1
+
+Carica i quattro file test-stampa.html, test-print-v1.js, test-print-v1.css, test-photo-pdf-v1.js nella radice del repository. Non sostituire index.html, app.js o sw.js.
+Apri in Safari normale https://checkfast.github.io/istant-photo-print/test-stampa.html
+La prova usa lo stesso archivio locale di cornice e logo della v3 in Safari normale, ma non modifica la versione principale. Nella modalità Home gli archivi possono essere distinti.
+Scatta: con la casella attiva viene tentata l'apertura AirPrint dal PDF incorporato. Se non si apre, premi RIPROVA AIRPRINT per un tentativo da un tocco diretto. L'evento load non garantisce che il visualizzatore PDF di Safari sia pronto: l'esito va verificato sul tuo iPad.
+Prima di confermare verifica una pagina, 10×15, nessuna intestazione e immagine intera. Se l'anteprima è vuota, tagliata o ha margini anomali, annulla.
+APRI PDF · METODO SICURO apre invece il PDF come nella v3: Condividi → Stampa.
+Non viene dichiarato successo fisico: la pagina non può distinguere una stampa conclusa da una richiesta ignorata. La prova non è verificata su iPad/AirPrint. Nessun server e nessun salvataggio automatico di foto/PDF. Per tornare alla v3 apri l'indirizzo principale.
