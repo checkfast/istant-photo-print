@@ -1,12 +1,12 @@
-STAMPA WITH YOU — prova Comandi Rapidi
+WITH YOU INSTANT PRINT — versione finale v4
 
-Carica i quattro file web nella radice del repository senza sostituire index.html. Apri in Safari normale:
-https://checkfast.github.io/istant-photo-print/comando-stampa.html
+Carica tutti i file di questa cartella nella radice del repository GitHub, sostituendo index.html e comando-stampa.html. Attendi la pubblicazione Pages.
+Per aprire senza confondere le vecchie pagine usa:
+https://checkfast.github.io/istant-photo-print/with-you.html
 
-Il comando Apple deve ricevere PDF dal foglio di condivisione e avere l'azione Stampa con Input comando rapido.
-Scatta, premi STAMPA WITH YOU, poi seleziona il comando omonimo nell'elenco azioni del menu Condividi (scorri verso il basso se necessario). Non scegliere Safari o l'invio del link: viene passato un vero file PDF.
-Non è possibile selezionare automaticamente il comando nel menu Condividi. Conferma manualmente AirPrint: carta 10×15, zoom 100%, una pagina. La prima volta iOS potrebbe richiedere autorizzazioni per eseguire il comando.
-Chiudi il menu di condivisione al termine e torna all'app. Prima di NUOVA FOTO completa la stampa. L'app non può sapere se la stampa fisica sia riuscita.
-Il PDF viene generato e condiviso in memoria senza scheda di anteprima. Non vengono richiesti salvataggi in Foto o File. iOS e l'app Comandi possono tenere copie temporanee fuori dal controllo del sito.
-Se il comando non appare, controlla Mostra nel foglio di condivisione e input PDF. Se il passaggio fallisce usa APRI PDF · METODO SICURO. La compatibilità della condivisione al comando va verificata sul tuo dispositivo.
-Questa pagina condivide le impostazioni locali di Safari con la v3. Non registra un service worker dedicato né garantisce offline; richiede il caricamento iniziale online. La v3 principale resta invariata.
+APRI FOTOCAMERA → SCATTA FOTO → STAMPA → nel menu di iOS scegli Stampa → conferma AirPrint.
+È la stessa condivisione del file PDF che hai già verificato funzionare. Il sito non può selezionare da solo la voce Stampa del menu iOS. Nessun comando rapido necessario, nessuna scheda PDF.
+NUOVA FOTO elimina il composito dalla memoria della pagina e riapre la fotocamera.
+Impostazioni in alto a destra: password 2006. Il blocco è locale, per evitare cambi accidentali; non è autenticazione server e il codice è visibile nel sito.
+Cornice, logo e impostazioni usano lo stesso archivio locale della versione precedente sullo stesso dominio in Safari normale. Foto e PDF non vengono salvati dall'app. iOS/stampante possono tenere dati temporanei del processo di stampa.
+Non viene registrata una nuova cache offline: durante gli aggiornamenti apri con Internet. Se il vecchio index resta visibile usa with-you.html. Non cancellare i dati del sito se vuoi conservare cornice e logo.
